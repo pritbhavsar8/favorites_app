@@ -26,7 +26,9 @@ class _FavoritesScreenState extends State<FavoritesScreen>
     {
        final product = favorites[index];
        return ListTile(
-       title: Text(product.title.toString()),
+         leading: Image.network(product.image.toString()),
+         title: Text(product.title.toString()),
+         subtitle: Text(product.rating!.rate.toString()),
        trailing: IconButton(
          icon: Icon(Icons.remove),
          onPressed: () {

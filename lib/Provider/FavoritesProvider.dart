@@ -4,8 +4,10 @@ import 'package:flutter/cupertino.dart';
 class FavoritesProvider extends ChangeNotifier
 {
   List<Product> _favorites = [];
-
-  List<Product> get favorites => _favorites;
+  // getter
+  List<Product> get favorites {
+   return _favorites;
+  }
 
   void addProduct(Product product) {
     _favorites.add(product);
